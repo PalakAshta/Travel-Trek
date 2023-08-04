@@ -1,0 +1,706 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+/* header section below */
+#test{
+  display: block;
+   
+  position: absolute;
+  top: 140%;
+}
+header
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 100px;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .logo
+{
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.toggle
+{
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background: url(https://i.ibb.co/HrfVRcx/menu.png);
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position: center;
+  cursor: pointer;
+}
+.toggle.active
+{
+  background: url(https://i.ibb.co/rt3HybH/close.png);
+  background-repeat: no-repeat;
+  background-size: 25px;
+  background-position: center;
+  cursor: pointer;
+}
+/* showcase is the home-page only & styling is done below */
+.showcase
+{
+  position: relative;
+  right: 0;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111;
+  transition: 0.5s;
+  z-index: 2;
+}
+/* For 3-bar menu div */
+.showcase.active
+{
+  right: 300px;
+}
+/* For background video */
+.showcase video
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+}
+.overlay
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #03a9f4;
+  mix-blend-mode: overlay;
+}
+.text
+{
+  position: relative;
+  z-index: 10;
+}
+
+.text h2
+{
+  font-size: 5em;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+.text h3
+{
+  font-size: 4em;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+.text p
+{
+  font-size: 1.1em;
+  color: #fff;
+  margin: 20px 0;
+  font-weight: 400;
+  max-width: 700px;
+}
+/* Explore link styling below */
+.my-btn
+{
+  display: inline-block;
+  font-size: 1em;
+  background: #fff;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 10px;
+  color: #111;
+  letter-spacing: 2px;
+  transition: 0.2s;
+}
+.my-btn:hover
+{
+  letter-spacing: 6px;
+}
+/* All the social media styling below */
+.social
+{
+  position: absolute;
+  z-index: 10;
+  bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social li
+{
+  list-style: none;
+}
+.social li a
+{
+  display: inline-block;
+  margin-right: 20px;
+  filter: invert(1);
+  transform: scale(0.5);
+  transition: 0.5s;
+}
+.social li a:hover
+{
+  transform: scale(0.5) translateY(-15px);
+}
+.menu
+{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu ul
+{
+  position: relative;
+}
+.menu ul li
+{
+  list-style: none;
+}
+.menu ul li a
+{
+  text-decoration: none;
+  font-size: 24px;
+  color: #111;
+}
+.menu ul li a:hover
+{
+  color: #03a9f4; 
+}
+
+@media (max-width: 991px)
+{
+  .showcase,
+  .showcase header
+  {
+    padding: 40px;
+  }
+  .text h2
+  {
+    font-size: 3em;
+  }
+  .text h3
+  {
+    font-size: 2em;
+  }
+}
+
+/* news section styling */
+.news
+{
+ position: relative;
+ width: 100%;
+ text-align: center;
+ padding-top: 100px;
+ overflow: hidden;
+}
+h1{
+  font-size: 36px;
+  font-weight: 600;
+}
+p{
+  color: #777;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 22px;
+  padding: 10px;
+}
+.row, .row1{
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-between;
+}
+.news-col, .news-col1{
+  flex-basis: 32%;
+  background: #fff3f3;
+  border-radius: 10px;
+  margin-bottom: 5%;
+  padding: 20px 12px;
+  box-sizing: border-box;
+  transition: 0.5s; 
+}
+h3{
+  text-align: center;
+  font-weight: 600;
+  margin: 10px 0;
+}
+/* 1st row hover */
+.news-col:hover{
+  box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+}
+/* 2nd row hover */
+.news-col1:hover{
+  box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+}
+
+@media(max-width: 700px){
+  .row, .row1{
+    flex-direction: column;
+  }
+}
+
+/* Destination section styling */
+.destination{
+  position: relative;
+  width: 100%;
+  padding-top: 1px;
+}
+/* .destination h1{ */
+  /* font-size: 36px; */
+  /* font-weight: 600; */
+  /* padding-bottom: 70px; */
+/* } */
+
+#ddiv1{
+  position: absolute;
+  top: 102%;
+  left: 10%;
+  height: 800px;
+}
+.dcontainer {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dcard {
+  transform-style: preserve-3d;
+  height: 77vh;
+  width: 350px;
+  border-radius: 30px;
+  padding: 0rem 5rem;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
+}
+
+
+.adimg {
+  margin-top: 1rem;
+  border-radius: 30px;
+  margin-left: -1.5rem;
+  width: 15rem;
+  z-index: 2;
+  transition: all 0.50s ease-out;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2), 0px 0px 30px rgba(0, 0, 0, 0.2);
+}
+
+
+.dinfo h1 {
+  margin-left: -0.5rem;
+  margin-top: 2rem;
+  font-size: 2rem;
+  transition: all 0.50s ease-out;
+}
+.dinfo p {
+  font-size: 1rem;
+  padding: 2rem 0rem;
+  color: #585858;
+  font-weight: lighter;
+  transition: all 0.50s ease-out;
+}
+
+.dpurchase {
+  margin-top: 0.5rem;
+  position: relative;
+  top: -15px;
+  transition: all 0.50s ease-out;
+}
+.dpurchase button {
+  width: 100%;
+  padding: 1rem 0rem;
+  background: #03a9f4;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 30px;
+  font-weight: bolder;
+}
+
+#ddiv2{
+  position: absolute;
+  top: 102%;
+  left: 42%;
+  height: 800px;
+}
+.dcontainer2 {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dcard2 {
+  transform-style: preserve-3d;
+  height: 77vh;
+  width: 350px;
+  border-radius: 30px;
+  padding: 0rem 5rem;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
+}
+
+
+.adimg2 {
+  margin-top: 1rem;
+  border-radius: 30px;
+  margin-left: -1.5rem;
+  width: 15rem;
+  z-index: 2;
+  transition: all 0.50s ease-out;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2), 0px 0px 30px rgba(0, 0, 0, 0.2);
+}
+
+
+.dinfo2 h1 {
+  margin-left: -0.5rem;
+  margin-top: 2rem;
+  font-size: 2rem;
+  transition: all 0.50s ease-out;
+}
+.dinfo2 p {
+  font-size: 1rem;
+  padding: 2rem 0rem;
+  color: #585858;
+  font-weight: lighter;
+  transition: all 0.50s ease-out;
+}
+
+.dpurchase2 {
+  margin-top: 0.5rem;
+  position: relative;
+  top: -15px;
+  transition: all 0.50s ease-out;
+}
+.dpurchase2 button {
+  width: 100%;
+  padding: 1rem 0rem;
+  background: #03a9f4;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 30px;
+  font-weight: bolder;
+}
+
+#ddiv3{
+  position: absolute;
+  top: 102%;
+  left: 75%;
+  height: 800px;
+}
+.dcontainer3 {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dcard3 {
+  transform-style: preserve-3d;
+  height: 77vh;
+  width: 350px;
+  border-radius: 30px;
+  padding: 0rem 5rem;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
+}
+
+
+.adimg3 {
+  margin-top: 1rem;
+  border-radius: 30px;
+  margin-left: -1.5rem;
+  width: 15rem;
+  z-index: 2;
+  transition: all 0.50s ease-out;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2), 0px 0px 30px rgba(0, 0, 0, 0.2);
+}
+
+
+.dinfo3 h1 {
+  margin-left: -0.5rem;
+  margin-top: 2rem;
+  font-size: 2rem;
+  transition: all 0.50s ease-out;
+}
+.dinfo3 p {
+  font-size: 1rem;
+  padding: 2rem 0rem;
+  color: #585858;
+  font-weight: lighter;
+  transition: all 0.50s ease-out;
+}
+
+.dpurchase3 {
+  margin-top: 0.5rem;
+  position: relative;
+  top: -15px;
+  transition: all 0.50s ease-out;
+}
+.dpurchase3 button {
+  width: 100%;
+  padding: 1rem 0rem;
+  background: #03a9f4;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 30px;
+  font-weight: bolder;
+}
+
+#ddiv4{
+  position: absolute;
+  top: 120%;
+  left: 10%;
+  height: 600px;
+}
+.dcontainer4 {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dcard4 {
+  transform-style: preserve-3d;
+  height: 77vh;
+  width: 350px;
+  border-radius: 30px;
+  padding: 0rem 5rem;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
+}
+
+
+.adimg4 {
+  margin-top: 1rem;
+  border-radius: 30px;
+  margin-left: -1.5rem;
+  width: 15rem;
+  z-index: 2;
+  transition: all 0.50s ease-out;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2), 0px 0px 30px rgba(0, 0, 0, 0.2);
+}
+
+
+.dinfo4 h1 {
+  margin-left: -0.5rem;
+  margin-top: 2rem;
+  font-size: 2rem;
+  transition: all 0.50s ease-out;
+}
+.dinfo4 p {
+  font-size: 1rem;
+  padding: 2rem 0rem;
+  color: #585858;
+  font-weight: lighter;
+  transition: all 0.50s ease-out;
+}
+
+.dpurchase4 {
+  margin-top: 0.5rem;
+  position: relative;
+  top: -15px;
+  transition: all 0.50s ease-out;
+}
+.dpurchase4 button {
+  width: 100%;
+  padding: 1rem 0rem;
+  background: #03a9f4;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 30px;
+  font-weight: bolder;
+}
+
+#ddiv5{
+  position: absolute;
+  top: 120%;
+  left: 42%;
+  height: 600px;
+}
+.dcontainer5 {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dcard5 {
+  transform-style: preserve-3d;
+  height: 77vh;
+  width: 350px;
+  border-radius: 30px;
+  padding: 0rem 5rem;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
+}
+
+
+.adimg5 {
+  margin-top: 1rem;
+  border-radius: 30px;
+  margin-left: -1.5rem;
+  width: 15rem;
+  z-index: 2;
+  transition: all 0.50s ease-out;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2), 0px 0px 30px rgba(0, 0, 0, 0.2);
+}
+
+
+.dinfo5 h1 {
+  margin-left: -0.5rem;
+  margin-top: 2rem;
+  font-size: 2rem;
+  transition: all 0.50s ease-out;
+}
+.dinfo5 p {
+  font-size: 1rem;
+  padding: 2rem 0rem;
+  color: #585858;
+  font-weight: lighter;
+  transition: all 0.50s ease-out;
+}
+
+.dpurchase5 {
+  margin-top: 0.5rem;
+  position: relative;
+  top: -15px;
+  transition: all 0.50s ease-out;
+}
+.dpurchase5 button {
+  width: 100%;
+  padding: 1rem 0rem;
+  background: #03a9f4;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 30px;
+  font-weight: bolder;
+}
+
+#ddiv6{
+  position: absolute;
+  top: 120%;
+  left: 75%;
+  height: 600px;
+}
+.dcontainer6 {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dcard6 {
+  transform-style: preserve-3d;
+  height: 77vh;
+  width: 350px;
+  border-radius: 30px;
+  padding: 0rem 5rem;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
+}
+
+
+.adimg6 {
+  margin-top: 1rem;
+  border-radius: 30px;
+  margin-left: -1.5rem;
+  width: 15rem;
+  z-index: 2;
+  transition: all 0.50s ease-out;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2), 0px 0px 30px rgba(0, 0, 0, 0.2);
+}
+
+
+.dinfo6 h1 {
+  margin-left: -0.5rem;
+  margin-top: 2rem;
+  font-size: 2rem;
+  transition: all 0.50s ease-out;
+}
+.dinfo6 p {
+  font-size: 1rem;
+  padding: 2rem 0rem;
+  color: #585858;
+  font-weight: lighter;
+  transition: all 0.50s ease-out;
+}
+
+.dpurchase6 {
+  margin-top: 0.5rem;
+  position: relative;
+  top: -15px;
+  transition: all 0.50s ease-out;
+}
+.dpurchase6 button {
+  width: 100%;
+  padding: 1rem 0rem;
+  background: #03a9f4;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 30px;
+  font-weight: bolder;
+}
+.footer{
+  position: absolute;
+  top: 140%;
+  padding: 0;
+  width: 100%;
+}
+#button {
+  display: inline-block;
+  background-color: grey;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color .3s, 
+    opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+#button::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: #fff;
+}
+#button:hover {
+  cursor: pointer;
+  background-color: #333;
+}
+#button:active {
+  background-color: #555;
+}
+#button.show {
+  opacity: 1;
+  visibility: visible;
+}
